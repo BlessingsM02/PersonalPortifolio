@@ -1,11 +1,11 @@
 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
-
-
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
-// const nodemailer = require('nodemailer');
+
+
+
 window.onscroll = () =>{
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -28,7 +28,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-
+//Handles all form submission
 document.getElementById('contact').addEventListener('submit', async function(event) {
   event.preventDefault();
   
@@ -49,7 +49,9 @@ document.getElementById('contact').addEventListener('submit', async function(eve
       icon: 'success',
       title: 'Message sent successfully!',
       showConfirmButton: false,
-      timer: 1600
+      timer: 1500
+    }).then(() => {
+      window.location.reload();
     });
   } else {
     Swal.fire({
@@ -60,7 +62,7 @@ document.getElementById('contact').addEventListener('submit', async function(eve
   }
 });
 
-
+//gets all messages from the server
 async function fetchMessages() {
   const response = await fetch('/api/messages');
   const messages = await response.json();

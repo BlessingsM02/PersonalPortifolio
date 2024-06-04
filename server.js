@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 const app = express();
 const db = new sqlite3.Database('contacts.db');
@@ -21,9 +23,23 @@ db.serialize(() => {
   `);
 });
 
-//Notify me after every message
+// Setup nodemailer transporter
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
+
+// Notify me after every message
 const notifyNewMessage = (name, email, message) => {
-  console.log(`New message received from ${name}`);
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: process.env.MY_EMAIL,
+    subject: 'Portifio Message',
+    text: `You have a new message from:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`
+  };
 };
 
 app.post('/api/contact', (req, res) => {

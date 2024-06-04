@@ -1,4 +1,5 @@
 
+/* Global reset and basic styles */
 *{
   margin: 0;
   padding: 0;
@@ -10,16 +11,17 @@
   font-family: "Poppins", sans-serif;
 }
 
-
 html{
   font-size: 62.5%;
   overflow-x: hidden;
 }
+
 body{
   background:#f9f9f9;
   color: black;
 }
 
+/* Header styles */
 header{
   position: fixed;
   top: 0;
@@ -35,6 +37,7 @@ header{
   z-index: 100;
 }
 
+/* Logo styles */
 .logo{
   font-size: 3rem;
   color: black;
@@ -52,6 +55,8 @@ span{
 .logo:hover{
   transform: scale(1.03);
 }
+
+/* Navbar styles */
 .navbar a{
   font-size: 1.8rem;
   color: black;
@@ -66,17 +71,20 @@ span{
   border-bottom: 3px solid #264d96;
 }
 
+/* Menu icon for responsive design */
 #menu-icon{
   font-size: 3.6rem;
   color:#264d96;
   display: none;
 }
 
+/* Section styles */
 section{
   min-height: 100vh;
   padding: 10rem 9% 10rem;
 }
 
+/* Home section styles */
 .home{
   display: flex;
   justify-content: center;
@@ -84,6 +92,7 @@ section{
   flex-direction: column;
   gap: 1rem;
 }
+
 .home-content{
   display: flex;
   align-items: center;
@@ -97,6 +106,7 @@ section{
   font-size: 3rem;
   font-weight: 700;
 }
+
 .home-content h1{
   font-size: 8rem;
   font-weight: 700;
@@ -105,13 +115,16 @@ section{
 
 .home-content h3:nth-of-type(2){
   margin-bottom: 2rem;
-  font-size: 4.8rem ;
+  font-size: 4.8rem;
 }
+
 .home-content p{
   font-size: 1.8rem;
   font-weight: 500;
   width: 1000px;
 }
+
+/* Social media icon styles */
 .icons a{
   display: inline-flex;
   justify-content: center;
@@ -126,11 +139,13 @@ section{
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.3s ease;
 }
+
 .icons a:hover{
   color: white;
   background-color: #264d96;
 }
 
+/* Button styles */
 .btn{
   display: inline-block;
   padding: 1rem 2.8rem;
@@ -151,6 +166,7 @@ section{
   border: 2px solid #264d96;
 }
 
+/* Text animation styles */
 .text-animation{
   font-size: 34px;
   font-weight: 600;
@@ -181,65 +197,46 @@ section{
 @keyframes cursor{
   to{
       border-left: 2px  solid #264d96;
-
   }
 }
 
-@keyframes  words{
-  0%,
-  20%{
+@keyframes words{
+  0%, 20%{
       content: 'Software Dev';
   }
-  21%,
-  40%{
-      content: 'Game Dev'
+  21%, 40%{
+      content: 'Game Dev';
   }
-  41%,
-  60%{
+  41%, 60%{
       content: 'Web Dev';
   }
-  61%,
-  80%{
+  61%, 80%{
       content: 'Backend Dev';
   }
-  81%,
-  100%{
+  81%, 100%{
       content: 'Student';
   }
 }
 
 @keyframes typing{ 
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95%{
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
       width: 0;
   }
-  50%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
-  80%,
-  85%{
+  50%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
       width: calc(100% + 8px);
   }
 }
+
+/* Skills section styles */
 .skills{
   background: #f9f9f9;
 }
+
 .skills h2{ 
   margin-bottom: 5rem;
   color: black;
 }
+
 .skills-container {
   display: flex;
   justify-content: center;
@@ -249,7 +246,7 @@ section{
 .skills-container ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px; /* Space between the columns */
+  gap: 50px; 
   list-style: none;
   padding: 0;
   margin: 0;
@@ -259,22 +256,21 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px; /* Width of the circle */
-  height: 100px; /* Height of the circle */
-  background-color: #f0f0f0; /* Background color of the circle */
-  border-radius: 50%; /* Make it a circle */
+  width: 100px; 
+  height: 100px; 
+  background-color: #f0f0f0;
+  border-radius: 50%; 
   text-align: center;
-  box-shadow: 0 4px 8px #264d96; /* Optional shadow for better visual appearance */
+  box-shadow: 0 4px 8px #264d96;
   transition: background-color 0.3s, color 0.3s;
 }
-
 
 .skills-container p {
   margin: 0;
   font-weight: bold;
-  font-size: 16px; /* Adjust font size as needed */
+  font-size: 16px;
   color: #264d96;
-  transition: color 0.3s; /* Text color */
+  transition: color 0.3s; 
 }
 
 .skills-container li:hover{
@@ -282,11 +278,12 @@ section{
   box-shadow: 0 4px 8px #f0f0f0;
   color: #f0f0f0;
 }
+
 .skills-container li:hover p {
-  color: #f0f0f0; /* Text color on hover */
+  color: #f0f0f0;
 }
 
-
+/* Projects section styles */
 .projects{
   background: #f9f9f9;
   color: black;
@@ -297,11 +294,10 @@ section{
   color: black;
 }
 
-
 #all-project {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;  /* Space between the columns */
+  gap: 2rem;  
 }
 
 .project {
@@ -355,7 +351,6 @@ section{
   font-size: 12px;
 }
 
-
 .repo-stats-left{
   display: flex;
   justify-content: space-between;
@@ -368,11 +363,13 @@ section{
   color: #666; 
 }
 
+/* Heading styles */
 .heading{
   text-align: center;
   font-size: 8rem;
 }
 
+/* Contact section styles */
 .contact{
   background-color:#f9f9f9;
 }
@@ -384,6 +381,8 @@ section{
 
 .contact form{
   max-width: 70rem;
+
+
   margin: 1rem auto;
   text-align: center;
   margin-bottom: 3rem;
@@ -411,6 +410,7 @@ section{
   margin-top: 2rem;
 }
 
+/* Footer styles */
 .footer{
   position: relative;
   bottom: 0;
@@ -443,6 +443,7 @@ section{
   padding: 0 15px;
 }
 
+/* Responsive styles for smaller screens */
 @media(max-width:1285px){
   html{
       font-size: 55%;
@@ -517,4 +518,3 @@ section{
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
