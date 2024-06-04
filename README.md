@@ -45,7 +45,7 @@ This portfolio website serves as an online resume and portfolio to showcase my s
 
 3. Install dependencies:
     ```bash
-   cd portfolio-website
+   cd PersonalPortifolio
    npm install
 
 4. Start the server:
