@@ -39,24 +39,24 @@ This portfolio website serves as an online resume and portfolio to showcase my s
 ## Setup and Installation
 
 1. Clone the repository:
-
-git clone https://github.com/your-username/portfolio-website.git
+    
+   git clone https://github.com/your-username/PersonalPortifolio.git
 
 
 2. Install dependencies:
 
-cd portfolio-website
-npm install
+   cd portfolio-website
+   npm install
 
 
 3. Start the server:
 
-node server.js
+   node server.js
 
 
 4. Open the website in your browser:
 
-http://localhost:3000
+    http://localhost:3000
 
 
 ## Usage
