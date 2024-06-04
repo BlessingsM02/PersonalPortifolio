@@ -28,20 +28,6 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'Chilegaming02@gmail.com',
-//     pass: 'edio qmmy tlmx rxoy'
-//   }
-// });
-
-// const mailOptions = {
-//   from: 'Portifoli@gmail.com',
-//   to: 'blessingsMwandira4@gmail.com',
-//   subject: 'New Contact Form Submission',
-//   text: `New message received from ${name} (${email}):\n\n${message}`
-// };
 
 document.getElementById('contact').addEventListener('submit', async function(event) {
   event.preventDefault();
@@ -63,7 +49,7 @@ document.getElementById('contact').addEventListener('submit', async function(eve
       icon: 'success',
       title: 'Message sent successfully!',
       showConfirmButton: false,
-      timer: 1500
+      timer: 1600
     });
   } else {
     Swal.fire({
@@ -73,6 +59,7 @@ document.getElementById('contact').addEventListener('submit', async function(eve
     });
   }
 });
+
 
 async function fetchMessages() {
   const response = await fetch('/api/messages');
@@ -89,7 +76,8 @@ async function fetchMessages() {
   });
 }
 
-async function fetchProjects() {
+//gets all the public repositories of a names user.. Chile02 in my case
+async function getUserProjects() {
   const response = await fetch('https://api.github.com/users/chile02/repos');
   const repos = await response.json();
   
@@ -139,4 +127,4 @@ async function fetchProjects() {
 }
 
 
-fetchProjects();
+getUserProjects();
