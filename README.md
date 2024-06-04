@@ -39,22 +39,20 @@ This portfolio website serves as an online resume and portfolio to showcase my s
 ## Setup and Installation
 
 1. Clone the repository:
-    ```bash
+    NB: Replace with your username
+   ```bash
    git clone https://github.com/your-username/PersonalPortifolio.git
 
-
-2. Install dependencies:
+3. Install dependencies:
     ```bash
    cd portfolio-website
    npm install
 
-
-3. Start the server:
+4. Start the server:
     ```bash
    node server.js
 
-
-4. Open the website in your browser:
+5. Open the website in your browser:
     ```bash
     http://localhost:3000
 
