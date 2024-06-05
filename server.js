@@ -40,6 +40,14 @@ const notifyNewMessage = (name, email, message) => {
     subject: 'Portifio Message',
     text: `You have a new message from:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
+  
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log('Error sending email:', error);
+    } else {
+      console.log('Email sent:', info.response);
+    }
+  });
 };
 
 app.post('/api/contact', (req, res) => {
